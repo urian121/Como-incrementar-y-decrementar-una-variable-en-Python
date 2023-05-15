@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include 'public/bases/head.html' %}
+  <body>
+    <!---Include del menu Horizontal-->
+    {% include 'public/pages/menu.html' %}
+
+    <main class="content-wrapper mt-5" style="margin-top: 80px !important">
+      <div class="container" style="width: 95% !important">
+        <!--Inicio del bloque body-->
+        {% block body %}
+        <!--Include-->
+        {% include 'public/pages/Dashboard.html' %}
+
+        <!--Cerrando bloque-->
+        {% endblock %}
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+  </body>
+</html>
