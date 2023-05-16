@@ -1,5 +1,4 @@
-from flask import Flask, request, redirect, render_template, url_for
-# from confiDB import * #Importando conexion BD
+from flask import Flask, render_template
 
 
 # Declarando nombre de la aplicación e inicializando, crear la aplicación Flask
@@ -14,6 +13,11 @@ def inicio():
 
 @app.route("/increment")
 def increment():
+    ''' 
+    Cuando se declara una variable como "global" dentro de una función, 
+    se indica que esa variable se refiere a la misma variable definida 
+    fuera de la función, en lugar de crear una nueva variable local con el mismo nombre.
+    '''
     global current_value
     current_value += 1
     return str(current_value)
